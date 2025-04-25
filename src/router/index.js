@@ -12,21 +12,23 @@ const routes = [
     path: "/",
     name: "home",
     component: Home,
-  },
-  {
-    path: "/product-list",
-    name: "product-list",
-    component: ProductList,
-  },
-  {
-    path: "/product-detail/:id",
-    name: "product-detail",
-    component: ProductDetail,
-  },
-  {
-    path: "/product-cart",
-    name: "product-cart",
-    component: ProductCart,
+    children: [
+      {
+        path: "/product-list",
+        name: "product-list",
+        component: ProductList,
+      },
+      {
+        path: "/product-detail",
+        name: "product-detail",
+        component: ProductDetail,
+      },
+      {
+        path: "/product-cart",
+        name: "product-cart",
+        component: ProductCart,
+      },
+    ],
   },
 ];
 // 创建路由实例，导入配置项和模式
