@@ -27,7 +27,7 @@
     </div>
     <div v-else>
       <p>购物车为空</p>
-      <router-link to="/products">去购物</router-link>
+      <router-link to="/product-list">去购物</router-link>
     </div>
   </div>
 </template>

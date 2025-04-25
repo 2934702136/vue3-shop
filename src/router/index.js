@@ -31,7 +31,7 @@ const routes = [
 ];
 // 创建路由实例，导入配置项和模式
 const router = createRouter({
-  history: createWebHistory("import.meta.env.BASE_URL"), //模式
+  history: createWebHistory(), //模式
   routes, //配置项
 });
 // 导出路由实例
