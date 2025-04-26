@@ -37,6 +37,24 @@
         </div>
       </div>
       <router-view />
+      <div class="banner">
+        <el-carousel class="banner-img">
+          <el-carousel-item v-for="item in bannerImg">
+            <img :src="item.url" />
+          </el-carousel-item>
+        </el-carousel>
+      </div>
+      <footer>
+        <div class="footer-item">
+          <div>协议规则</div>
+          <div>新手上路</div>
+          <div>付款方式</div>
+          <div>店铺特色</div>
+        </div>
+        <div class="footer-item"><div>协议规则</div></div>
+        <div class="footer-item"><div>协议规则</div></div>
+        <div class="footer-item"><div>协议规则</div></div>
+      </footer>
     </div>
   </div>
 </template>
@@ -51,6 +69,11 @@ const router = useRouter();
 const handleSelect = (val) => {
   router.push(val);
 };
+const bannerImg = ref([
+  { url: "src/assets/img1.jpg" },
+  { url: "../src/assets/img2.jpg" },
+  { url: "../src/assets/img3.jpg" },
+]);
 </script>
 
 <style scoped lang="scss">
@@ -98,5 +121,23 @@ const handleSelect = (val) => {
 .content-logo {
   // margin-top: -50px;
   display: flex;
+}
+.banner-img {
+  background-color: green;
+}
+.banner {
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+footer {
+  background-color: white;
+  height: 50px;
+  display: flex;
+  width: 100%;
+}
+.footer-item {
+  flex: 1;
 }
 </style>
